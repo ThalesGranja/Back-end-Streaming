@@ -1,7 +1,7 @@
 const readline = require("readline");
-const Usuario = require("./usuarios");
-const Filme = require("./filmes");
-const Comentario = require("./comentarios");
+const Usuario = require("./controllers/usuariosController.js");
+const Filme = require("./controllers/filmesController.js");
+const Comentario = require("./controllers/comentariosController.js");
 
 const rl = readline.createInterface({
     input: process.stdin,

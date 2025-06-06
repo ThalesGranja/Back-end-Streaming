@@ -1,5 +1,5 @@
-const { connect } = require("./db");
-const Logger = require("./logger");
+const { connect } = require("../models/db");
+const Logger = require("../middlewares/logger");
 
 class Usuario {
     constructor(idUser, nameUser, email, pass, type, stats) {

@@ -1,5 +1,5 @@
-const { connect } = require("./db");
-const Logger = require("./logger");
+const { connect } = require("../models/db");
+const Logger = require("../middlewares/logger");
 
 class Comentario {
     constructor(idCom, idUser, idFilm, message, dateCom) {
