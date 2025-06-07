@@ -12,7 +12,6 @@ class Comentario {
 
     async inserir() {
         try {
-            // Validação dos campos
             if (
                 isNaN(this.idCom) || this.idCom === null ||
                 isNaN(this.idUser) || this.idUser === null ||

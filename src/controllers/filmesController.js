@@ -3,7 +3,7 @@ const Logger = require("../middlewares/logger");
 
 class Filme {
     constructor(idFilm, nameFilm, leng, gen, classif, desc) {
-        this.idFilm = Number(idFilm); // Converte para número
+        this.idFilm = Number(idFilm);
         this.nameFilm = nameFilm;
         this.leng = leng;
         this.gen = gen;
@@ -13,7 +13,6 @@ class Filme {
 
     async inserir() {
         try {
-            // Validação dos campos
             if (
                 isNaN(this.idFilm) || this.idFilm === null ||
                 !this.nameFilm || this.nameFilm.trim() === "" ||
@@ -66,7 +65,7 @@ class Filme {
     static async deletar(filtro) {
         try {
             const { db, client } = await connect();
-            const result = await db.collection("filmes").deleteMany(filtro); // Corrigido: era 'usuarios'
+            const result = await db.collection("filmes").deleteMany(filtro);
             console.log("Filmes deletados com sucesso!", result.deletedCount);
             client.close();
         } catch (error) {

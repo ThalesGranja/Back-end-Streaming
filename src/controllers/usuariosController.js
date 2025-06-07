@@ -3,7 +3,7 @@ const Logger = require("../middlewares/logger");
 
 class Usuario {
     constructor(idUser, nameUser, email, pass, type, stats) {
-        this.idUser = Number(idUser); // Garante que será um número
+        this.idUser = Number(idUser);
         this.nameUser = nameUser;
         this.email = email;
         this.pass = pass;
@@ -13,7 +13,6 @@ class Usuario {
 
     async inserir() {
         try {
-            // Validação dos campos
             if (
                 isNaN(this.idUser) || this.idUser === null ||
                 !this.nameUser || this.nameUser.trim() === "" ||
